@@ -1,0 +1,75 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
+  Include:
+  - '**/*.rb'
+  - "**/*.gemspec"
+  - "**/*.rake"
+  - "**/Gemfile"
+  - "**/Rakefile"
+  - "**/Guardfile"
+  Exclude:
+  - "vendor/**/*"
+  - "bin/**/*"
+  DisplayCopNames: true
+  DisplayStyleGuide: false
+  StyleGuideCopsOnly: false
+  DisabledByDefault: false
+  UseCache: true
+  MaxFilesInCache: 20000
+  CacheRootDirectory: "/tmp"
+
+Bundler/OrderedGems:
+  Enabled: false
+  Exclude:
+    - 'Gemfile'
+Lint/MissingSuper:
+  Enabled: false
+Layout/LineLength:
+  Enabled: true
+  AllowedPatterns: ['\A\s*#']
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-string-literals
+  Enabled: false
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes
+Style/StringLiteralsInInterpolation:
+  Description: Checks if uses of quotes inside expressions in interpolated strings
+    match the configured preference.
+  Enabled: true
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes
+Style/FrozenStringLiteralComment:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/RaiseArgs:
+  Enabled: false
+Style/RescueStandardError:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Metrics/MethodLength:
+  Enabled: true
+Metrics/AbcSize:
+  Enabled: true
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/**/*.rb'
+Metrics/ClassLength:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*.rb'
+Style/Documentation:
+  Enabled: false
