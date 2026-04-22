@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'ixbrl_to_pdf'
-  s.version = '1.0.0'
+  s.version = '1.1.0'
   s.authors = ['Silverfin NV']
   s.description = 'iText Wrapper for converting iXRBLs to PDFs'
   s.summary = s.description
